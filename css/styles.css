@@ -1,0 +1,54 @@
+body {
+    background-color: #2962ff;
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 6rem;
+}
+
+p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+}
+
+.black {
+    background-color: black;
+    height: 25px;
+    width: 175px;
+    margin: 0 auto;
+    border: 1px solid #2b2a2a;
+    border-radius: 50px;
+}
+.white {
+    background-color: white;
+    height: 10px;
+    width: 160px;
+    margin: 0 auto;
+    border: 1px solid #cecdcd;
+    border-radius: 50px;
+
+}
+.blank {
+    height: 30px;
+    width: 30px;
+    margin: 0 auto;
+}
+
+.oreo {
+    margin: 2rem;
+    /* position: absolute; */
+    float: left;
+}
+
+.oreos{
+    margin: 0 auto;
+}
+
+.input {
+    margin: 0 auto;
+}
