@@ -63,25 +63,35 @@ function arrangeElement(charList){
         else if(ele === '&'){
             div = document.createElement("div");
             div.setAttribute("class", "blank");
-            custom_oreo.appendChild(div)
+            custom_oreo.appendChild(div);
         }
     });
-    oreos = document.getElementsByClassName('oreos')[0];
+    deleteBtn = document.createElement('button');
+    deleteBtn.setAttribute('onclick', 'deleteEle(this)');
+    deleteBtn.textContent = 'Dump';
+    custom_oreo.appendChild(deleteBtn);
+    oreos = document.getElementById('oreos');
     oreos.appendChild(custom_oreo);
-    // dragAndDrop();
+    
+
+    
+ 
+
 }
+
+// dragAndDrop();
 
 // function dragAndDrop(){
 //     oreos = document.getElementsByClassName('oreo');
 
 //     for(i=0; i<oreos.length; i++){
 //         dragOreo(oreos[i]);
-//         function dragOreo(oreo){
+//             function dragOreo(oreo){
 //             var oldX = 0, oldY = 0, newX = 0, newY = 0;
 //             oreo.onmousedown = dragMouseDown;
     
 //             function dragMouseDown(event) {
-//                 // event = event || window.event
+//                 event = event || window.event
 //                 event.preventDefault();
 //                 oldX = event.clientX;
 //                 oldY = event.clientY;
@@ -90,7 +100,7 @@ function arrangeElement(charList){
 //             }
     
 //             function elementDrag(event){
-//                 // event = event || window.event
+//                 event = event || window.event
 //                 event.preventDefault();
 //                 newX = oldX - event.clientX;
 //                 newY = oldY - event.clientY;
@@ -111,4 +121,11 @@ function arrangeElement(charList){
     
 //     }
 
-    
+
+function deleteEle(delBtn){
+    oreos = document.getElementById('oreos');
+    if(delBtn.parentElement){
+    oreo = delBtn.parentElement;
+    oreos.removeChild(oreo);
+    }
+}
